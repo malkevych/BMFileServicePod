@@ -24,8 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   This project is an iOS library which can help you implement navigation by folders and downloading files and from your favorite services like dropBox, googleDrive, maildisk and other.
+  s.description  = "This project is an iOS library which can help you implement navigation by folders and downloading files and from your favorite services like dropBox, googleDrive, maildisk and other."
 
   s.homepage     = "https://github.com/webslesar/BMFileServicePod.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -38,8 +37,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "LICENSE" }
+
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,8 +52,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Malkevych Bohdan Ihorovych" => "bomalkevych@gmail.com" }
-  # Or just: s.author    = "Malkevych Bohdan Ihorovych"
-  # s.authors            = { "Malkevych Bohdan Ihorovych" => "" }
   s.social_media_url   = "https://www.facebook.com/malkevych"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
