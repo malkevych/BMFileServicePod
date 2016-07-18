@@ -26,8 +26,9 @@ static NSString * const kFolderKey = @"application/vnd.google-apps.folder";
     if (self) {
         self.extention = [file.fileExtension lowercaseString];
         self.identifier = file.identifier;
-        self.title = file.title;
-        self.serverPath = file.downloadUrl;
+        self.title = file.name;
+        NSString *url = [NSString stringWithFormat:@"https://www.googleapis.com/drive/v3/files/%@?alt=media", file.identifier];
+        self.serverPath = url;
         
         NSString *fileExtension = file.fileExtension;
         if ([file.mimeType isEqualToString:kFolderKey]) {
@@ -53,7 +54,7 @@ static NSString * const kFolderKey = @"application/vnd.google-apps.folder";
 }
 
 -(BOOL)isTrashed {
-    return self.labels.trashed.boolValue;
+    return self.trashed.boolValue;
 }
 
 @end

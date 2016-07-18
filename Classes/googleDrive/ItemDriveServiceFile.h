@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString * extention;
 @property (nonatomic, assign) FSFileType fileType;
 @property (nonatomic, strong) NSString * serverPath;
+@property (nonatomic, strong) NSString * title;
 
 -(BOOL)isFolder;
 +(NSArray <ItemDriveServiceFile*>*)getItemDriveServiceFilesFrom:(NSArray <GTLDriveFile *>*)files;

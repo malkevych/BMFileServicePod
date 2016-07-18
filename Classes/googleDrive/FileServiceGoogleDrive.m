@@ -102,10 +102,10 @@ static NSString * const kFolderKey = @"application/vnd.google-apps.folder";
     
     query.q  = queryQ;
     [self.driveService executeQuery:query completionHandler:^(GTLServiceTicket *ticket,
-                                                    GTLDriveFileList *files,
-                                                    NSError *error) {
+                                                              GTLDriveFileList *files,
+                                                              NSError *error) {
         
-        NSArray <ItemDriveServiceFile*>* resFiles = [ItemDriveServiceFile getItemDriveServiceFilesFrom:files.items];
+        NSArray <ItemDriveServiceFile*>* resFiles = [ItemDriveServiceFile getItemDriveServiceFilesFrom:files.files];
         handler(resFiles, error);
     }];
 }
@@ -115,8 +115,8 @@ static NSString * const kFolderKey = @"application/vnd.google-apps.folder";
 
 -(void)downloadAndSaveFile:(id<ItemFromFileServiceProtocol>)file localUrl:(NSURL *)url handler:(FileDownloadHandler)handler {
     NSString *dataPath = [[url path] stringByAppendingPathComponent:file.title];
-    GTMHTTPFetcher *fetcher =  [self.driveService.fetcherService fetcherWithURLString:file.serverPath];
-    fetcher.downloadPath = dataPath;
+    GTMSessionFetcher *fetcher =  [self.driveService.fetcherService fetcherWithURLString:file.serverPath];
+    fetcher.destinationFileURL = [NSURL fileURLWithPath:dataPath isDirectory:NO];
     [fetcher beginFetchWithCompletionHandler:^(NSData *data, NSError *error) {
         if (error == nil) {
             handler(dataPath, nil);
