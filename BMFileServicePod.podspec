@@ -118,12 +118,12 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.frameworks   = 'Dropbox'
+  s.frameworks   = 'DropboxSDK'
 
   s.dependency "GoogleAPIClient/Drive"
   s.dependency "GTMOAuth2", "~> 1.1.0"
   s.dependency "SVProgressHUD"
-  s.dependency 'Dropbox-Sync-API-SDK', '~> 3.0.2'
-  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Dropbox-Sync-API-SDK/dropbox-ios-sync-sdk-3.0.2"' }
+  s.dependency 'Dropbox-iOS-SDK', '~> 1.3.3'
+  
 
 end
