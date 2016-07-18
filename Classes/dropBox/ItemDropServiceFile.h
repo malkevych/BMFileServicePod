@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ItemFromFileServiceProtocol.h"
 #import "ItemDriveServiceFile.h"
-#import <DropboxSDK/DropboxSDK.h>
+#import <Dropbox/Dropbox.h>
 
 @interface ItemDropServiceFile : DBMetadata <ItemFromFileServiceProtocol>
 
