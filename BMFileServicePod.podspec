@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "Dropbox"
+  s.framework  = "Dropbox-iOS-SDK"
   #s.frameworks = "Security", "QuartzCore"
 
   # s.library   = ""
