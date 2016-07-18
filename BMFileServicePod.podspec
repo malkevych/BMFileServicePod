@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BMFileServicePod"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "BMFileServicePod implements navigation by clouds file storages, provide protocol to add new services."
 
   # This description is used to generate tags and improve search results.
@@ -118,9 +118,12 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.frameworks   = 'Dropbox'
+
   s.dependency "GoogleAPIClient/Drive"
   s.dependency "GTMOAuth2", "~> 1.1.0"
   s.dependency "SVProgressHUD"
-  s.dependency "Dropbox-iOS-SDK"
+  s.dependency 'Dropbox-Sync-API-SDK', '~> 3.0.2'
+  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Dropbox-Sync-API-SDK/dropbox-ios-sync-sdk-3.0.2"' }
 
 end
