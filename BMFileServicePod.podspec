@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BMFileServicePod"
-  s.version      = "0.0.9.9"
+  s.version      = "0.0.9.9.1"
   s.summary      = "BMFileServicePod implements navigation by clouds file storages, provide protocol to add new services."
 
   # This description is used to generate tags and improve search results.
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "libz.1.2.5.dylib"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
