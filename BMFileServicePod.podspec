@@ -107,8 +107,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "Dropbox-iOS-SDK"
-  #s.frameworks = "Security", "QuartzCore"
+  # s.framework  = "Dropbox-iOS-SDK"
+
 
   # s.library   = ""
   # s.libraries = "iconv", "xml2"
@@ -120,10 +120,11 @@ Pod::Spec.new do |s|
   s.dependency "GoogleAPIClient/Drive"
   s.dependency "GTMOAuth2", "~> 1.1.0"
   s.dependency "SVProgressHUD"
-  s.dependency 'Dropbox-iOS-SDK', '1.3.9'
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Dropbox-iOS-SDK/dropbox-ios-sdk-1.3.9"' }
+  s.dependency 'Dropbox-Sync-API-SDK', '~> 3.1.2'
+  s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Dropbox-Sync-API-SDK/dropbox-ios-sync-sdk-3.1.2"' }
+
+  s.frameworks = "Dropbox"
 
 
 end
