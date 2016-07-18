@@ -121,6 +121,6 @@ Pod::Spec.new do |s|
   s.dependency "GoogleAPIClient/Drive"
   s.dependency "GTMOAuth2", "~> 1.1.0"
   s.dependency "SVProgressHUD"
-  s.dependency "Dropbox-iOS-SD"
+  s.dependency "Dropbox-iOS-SDK"
 
 end
