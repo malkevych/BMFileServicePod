@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [super viewDidLoad];
-    self.navigationBar.barTintColor = [UIColor colorWithHex:0x0D78D1 andAlpha:1];
+    self.navigationBar.barTintColor = [UIColor blueColor];
     self.navigationBar.tintColor = [UIColor whiteColor];
 }
 
