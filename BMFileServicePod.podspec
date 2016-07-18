@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BMFileServicePod"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "BMFileServicePod implements navigation by clouds file storages, provide protocol to add new services."
 
   # This description is used to generate tags and improve search results.
@@ -124,6 +124,6 @@ Pod::Spec.new do |s|
   s.dependency "GTMOAuth2", "~> 1.1.0"
   s.dependency "SVProgressHUD"
   s.dependency 'Dropbox-iOS-SDK', '~> 1.3.3'
-  
+
 
 end
