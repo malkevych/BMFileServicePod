@@ -10,6 +10,7 @@
 #import "FileServiceGoogleDrive.h"
 #import "GTMOAuth2ViewControllerTouch.h"
 #import "GTLDrive.h"
+#import "SVProgressHUD/SVProgressHUD.h"
 
 typedef void(^FileSavingCompletionHandler) (BOOL successStatus);
 
